@@ -2,8 +2,9 @@
 
 From cancelled to confirmed in Minutes: delta-rebooking-1min-video
 
+[![Watch the one-minute rebooking demo](video/demo/delta-rebooking-1min-poster.jpg)](video/demo/delta-rebooking-1min-video.mp4)
 
-[![Watch the four-minute demo](video/demo/poster.png)](video/demo/delta-recovery-live-demo.mp4)
+**[Watch the one-minute rebooking video](video/demo/delta-rebooking-1min-video.mp4)**
 
 **[Watch the narrated demo](video/demo/delta-recovery-live-demo.mp4)** · [Execution evidence](video/demo/execution.json) · [Four-minute script](video/demo/script.md)
 
