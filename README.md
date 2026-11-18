@@ -16,6 +16,17 @@ A cancelled flight should lead to a verified recovery, with the correct passenge
 
 This project demonstrates that journey using **Salesforce Agentforce, Data 360 and Snowflake**, connected to an executable synthetic reservation and voucher service. Salesforce and Snowflake calls are real. Passenger records, flight operations, bookings and voucher policies are synthetic demonstration data; this is not a Delta production system.
 
+## Pilot Targets to Validate — Not Baselines
+
+These are proposed pilot targets to validate, not measured baselines or achieved results.
+
+| Measure | Pilot target | Why it matters |
+| --- | --- | --- |
+| Median time to rebook | Under 5 minutes for eligible Medallion passengers on a single disrupted route | Speed is the passenger experience during disruption. |
+| Routine contact deflection | 30% deflection of routine rebook contacts in the pilot | Frees human agents for complex and vulnerable passengers. |
+| Wrong-passenger rebookings | **Zero. This is a hard gate, not a target to trade off.** | One wrong identity merge makes the whole design unsafe. |
+| Experience and cost | CSAT and cost per contact tracked throughout the pilot | Speed without trust or value is not success. |
+
 ## Passenger Recovery Agent
 
 The published `Delta_Medallion_Recovery` agent verifies passenger context, checks cancellation status, retrieves real options from the mock reservation API, records an explicit selection, and completes a reservation. Above-cap voucher requests require human approval. If a seat disappears, the service rejects the transaction and the agent must retrieve fresh inventory.
@@ -27,6 +38,30 @@ The published `Delta_Medallion_Recovery` agent verifies passenger context, check
 - **Execution:** Agentforce → Flow → Apex → Named Credential → FastAPI.
 - **Identity:** native Data 360 resolution consolidates 14 source records into 13 profiles; conflicting loyalty identities remain separate.
 - **Grounding:** a unified Data Graph verifies the fixed P001 pilot identity. The Data 360 Query API separately reads consent-filtered Snowflake context through native zero-copy federation.
+
+### Agent Topics
+
+| Topic | What it does | Boundary |
+| --- | --- | --- |
+| Disruption Status | Explains what happened using grounded sources only | Read only; no transaction. |
+| Rebook | Offers real options and completes an accepted rebooking | Same cabin, pilot route and approved 24-hour recovery window only; explicit passenger acceptance required. |
+| Credit / Voucher | Explains eligibility and requests or issues a voucher within the permitted limit | Autonomous up to the $200 pilot cap; human approval above it. |
+| Escalate | Prepares a human-review Case with the full available context | Passenger can request escalation at any time; staffed routing and human receipt remain unverified. |
+
+### Agent Actions
+
+The published agent has seven registered actions. The Case workflow below is a supporting capability, separate from those seven actions. External calls use Flow → Apex → Named Credential → API.
+
+| Action | Inputs / Outputs | Tool type | Permission |
+| --- | --- | --- | --- |
+| Get customer context | Authenticated passenger context in / verified identity, loyalty, consent purpose and source references out | Flow calling the context API; Data Graph and federated Query API grounding | Autonomous read, subject to passenger binding and consent. |
+| Get flight status | PNR in / cancellation status, reason and source timestamp out | Flow calling the external status API | Autonomous read. |
+| Get rebook options | Authorized PNR and verified passenger context in / currently available same-cabin options out; two options in the happy path | Flow calling the external reservation API | Autonomous read within pilot eligibility rules. |
+| Record acceptance | PNR and chosen option in / short-lived acceptance ID out | Flow calling the acceptance API | Requires explicit passenger selection and authorization. |
+| Complete rebook | Chosen option, acceptance ID, passenger reference and idempotency key in / reservation confirmation, existing PNR and selected option out | Flow calling the rebooking API | Autonomous execution after acceptance, within pilot rules. |
+| Issue / request voucher | Amount, reason, Case reference and idempotency key in / voucher ID or approval-required request out | Flow calling the voucher API | Autonomous up to $200; separate human approval above it. |
+| Create / update Case — supporting workflow | Verified transaction ID and summary in / Case record ID out | Flow with guarded Apex upsert; runtime synchronization uses Salesforce REST | Autonomous after authoritative booking confirmation; recovery action permission required for the Flow. |
+| Escalate to human | Passenger request and available context package in / durable handoff and Case update status out | Flow calling the escalation API | Autonomous and on demand; no claim of staffed delivery or human acknowledgement. |
 
 ### Agent Architecture
 
@@ -42,7 +77,6 @@ The published `Delta_Medallion_Recovery` agent verifies passenger context, check
 | FastAPI reservation service | Authoritative synthetic flight status, inventory, acceptance, atomic rebooking and idempotency |
 | Voucher service | $200 autonomous demonstration cap; approval proposal for a $250 request; separate human approver role |
 | Salesforce Case | Confirmed booking synchronization and a context-bearing human-review record |
-| Presenter console | Actual published Agentforce replies and live API traces, shown together for recording and inspection |
 
 The external Snowflake DLOs are queried separately from the unified Graph; custom federated DMO and Graph relationships are not deployed. Live seat inventory stays in the reservation service.
 
@@ -53,7 +87,6 @@ The external Snowflake DLOs are queried separately from the unified Graph; custo
 - Python 3.13 and Salesforce CLI (`sf`).
 - An authorized Salesforce org with Agentforce and Data 360 enabled. This demo uses alias `delta-dev` and existing deployed synthetic source identifiers.
 - For the native path, the existing Snowflake connector and three `DIRECT_ACCESS` streams described in the [federation runbook](docs/federation-decision.md).
-- For recording: macOS `say`, Google Chrome, Node.js, and the Cloudflare `cloudflared` executable.
 
 ### Installation
 
@@ -95,29 +128,6 @@ Use it as the bearer credential when calling the API. Keep credentials out of so
 
 Open the published **Delta Medallion Recovery** agent in Agentforce Builder and start Preview. Its Named Credential must point to the running service and contain a matching unexpired P001 token. [Conversation prompts](docs/live-agentforce-conversation.md) cover status, context, options, explicit acceptance, booking and voucher approval.
 
-### Recording the Demo
-
-The launcher creates fresh happy-path and failure ledgers, a P001-only 90-minute token, a temporary HTTPS tunnel, and updates the existing Salesforce Named Credential. Run it only in the authorized synthetic demonstration environment. It sends no outbound passenger message.
-
-```bash
-.venv/bin/python -m pip install -r requirements-media.txt
-npm --prefix demo install
-# Install cloudflared separately; make it available on PATH.
-.venv/bin/python scripts/start_recording_demo.py
-```
-
-Open [the private presenter console](http://127.0.0.1:8765). In a second terminal:
-
-```bash
-node scripts/record_demo.mjs
-.venv/bin/python scripts/verify_recording.py
-.venv/bin/python scripts/render_demo.py
-```
-
-The recorder executes the published agent's live actions and captures the running browser. The renderer produces a four-minute 1080p video, spoken narration, burned captions, selectable subtitles and chapter markers. Cloud waits are shortened and labeled. Raw recordings and credentials stay in ignored `tmp/recording/`; reviewed execution evidence accompanies the final video.
-
-The launcher refuses to overwrite an existing ledger. Archive `tmp/recording/` before a new run. Stop the launcher after recording to close the tunnel. The recording temporarily points the Named Credential at the isolated failure ledger for the final test; the launcher restores the happy-path endpoint when it shuts down.
-
 ## Validation
 
 ```bash
@@ -143,11 +153,10 @@ delta_demo/       Integration service, identity and cloud adapters
 salesforce/       Active metadata and Data 360 configuration assets
 snowflake/        Synthetic source schema and bootstrap SQL
 data/             Synthetic passenger records and source mappings
-demo/             Private live presenter console
-scripts/          Setup, deployment, verification and recording tools
+scripts/          Setup, deployment and verification tools
 tests/            Automated behavior and adapter tests
 architecture/     Current architecture diagram
-video/demo/       Narrated recording, script, captions and fresh evidence
+video/demo/       Product demo videos, captions and execution evidence
 docs/             Deployment, data model, federation and security runbooks
 ```
 
