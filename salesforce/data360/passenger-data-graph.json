@@ -1,0 +1,31 @@
+{
+  "description": "Synthetic pilot context projection; native unified-profile linkage awaits verified identity rules.",
+  "label": "Passenger Disruption Context",
+  "name": "Passenger_Disruption_Context",
+  "primaryObjectName": "ssot__Individual__dlm",
+  "type": "NONE",
+  "sourceObject": {
+    "fields": [
+      {
+        "dataType": "Text",
+        "isKeyColumn": true,
+        "isProjected": true,
+        "sourceFieldName": "ssot__Id__c"
+      },
+      {
+        "dataType": "Text",
+        "isProjected": true,
+        "sourceFieldName": "ssot__LastName__c",
+        "isKeyColumn": false
+      },
+      {
+        "dataType": "Text",
+        "isProjected": true,
+        "sourceFieldName": "ssot__ExternalRecordId__c",
+        "isKeyColumn": false
+      }
+    ],
+    "name": "ssot__Individual__dlm"
+  },
+  "dataspaceName": "default"
+}

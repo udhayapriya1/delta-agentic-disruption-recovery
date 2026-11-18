@@ -1,0 +1,1 @@
+{"name":"delta-demo-recorder","private":true,"type":"module","scripts":{"record":"node ../scripts/record_demo.mjs"},"dependencies":{"puppeteer":"^25.0.0"}}

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Raw_Email__c</fullName><description>Original source email preserved before deterministic verified-contact preparation. Never used alone for automatic identity matching.</description><label>Raw Source Email</label><type>Email</type></CustomField>

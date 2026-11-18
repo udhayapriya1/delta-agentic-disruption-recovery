@@ -1,0 +1,20 @@
+{
+  "actual_salesforce_query": true,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "Case",
+          "url": "/services/data/v68.0/sobjects/Case/500bm00003RBixVAAT"
+        },
+        "Id": "500bm00003RBixVAAT",
+        "CaseNumber": "00001033",
+        "Status": "Working",
+        "Delta_Transaction_Id__c": "SYN-CEB1303BE9AF",
+        "Description": "{\"human_review_required\": true, \"handoff\": {\"passenger_ref\": \"303d39c4af48a7ff\", \"pnr_ref\": \"feff1e11932cb06f\", \"reason\": \"passenger_requested_human\", \"booking\": [{\"id\": \"SYN-CEB1303BE9AF\", \"passenger\": \"P001\", \"option_id\": \"OPT-1\", \"created_at\": \"2026-11-18T03:22:29.865742+00:00\"}], \"options_presently_available\": [{\"id\": \"OPT-1\", \"flight\": \"DL-SYN1\", \"departure\": \"2026-11-18T07:18:48.261410+00:00\", \"arrival\": \"2026-11-18T09:18:48.261410+00:00\", \"cabin\": \"ECONOMY\", \"seats\": 4}, {\"id\": \"OPT-2\", \"flight\": \"DL-SYN2\", \"departure\": \"2026-11-18T08:18:48.261410+00:00\", \"arrival\": \"2026-11-18T10:18:48.261410+00:00\", \"cabin\": \"ECONOMY\", \"seats\": 5}], \"voucher_requests\": [{\"id\": \"VR-28da3e59b256da11502c\", \"amount\": \"250\"}], \"audit_references\": [\"e57486e6-5e7d-4388-8b72-747c21dc3ba3\", \"19cdefa1-7f99-48f4-9184-98c2a19ae2d7\", \"66a1b4eb-594e-4b6e-b531-2a3da0a4102c\", \"675dd0a9-f7ec-42e5-93e4-a09e25fdbfe5\", \"9b3a1def-226c-4d77-9102-5a1fa07d894c\", \"f1c8b4a7-1e54-4e8e-a031-e14275b0060b\", \"84e2c582-a079-4048-a6cc-2a48609caf33\", \"240b3515-ac18-4207-a524-f659debf6224\", \"8f6f9c6c-cbac-4701-af8c-96d21a27901b\"], \"loyalty_context\": {\"tier\": \"GOLD\", \"miles\": 42000, \"source\": \"Delta_Snowflake_Loyalty__dll\", \"source_timestamp\": \"2026-11-15 22:45:19.498 UTC\", \"query_id\": \"MTAuNzQuOTMuOTE6NzQ4NA_5db4ed78-86ce-445c-8bfb-9d4367103bed\"}, \"status\": \"CANCELLED\", \"source\": \"synthetic reservation\", \"case_ref\": \"CASE-38db6a633f3b\", \"system\": \"local durable handoff\", \"human_acknowledged\": false, \"omni_channel_verified\": false, \"identity_context\": {\"graph\": \"Delta_Unified_Disruption\", \"profile_binding_verified\": true, \"adapter\": \"real Salesforce REST via local authorized CLI; native Apex fallback\", \"source_field\": \"ssot__ExternalRecordId__c\", \"native_unified_merge_verified\": true, \"unified_link_query_id\": \"MTAuNzQuOTMuOTE6NzQ4NA_4b8299c9-02ba-4c18-8933-cb911edb9855\", \"request_id\": \"053b0ed32c6442c91383300b3462a091\"}, \"booking_context_query_id\": \"MTAuNzQuOTMuOTE6NzQ4NA_8608c44f-6b78-4a5b-b606-26218806e901\"}, \"delivery\": \"Case updated; Omni-Channel routing and human acknowledgement unverified\"}"
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  }
+}

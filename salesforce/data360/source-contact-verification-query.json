@@ -1,0 +1,1 @@
+{"sql": "SELECT Id__c, Email_c__c, Identity_Email_c__c, LastModifiedDate__c FROM Delta_Passenger_Source__dll WHERE Passenger_Ref_c__c='P001'"}

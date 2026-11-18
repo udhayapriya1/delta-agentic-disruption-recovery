@@ -1,0 +1,1 @@
+{"sql": "SELECT ssot__Id__c, ssot__LastName__c, ssot__ExternalRecordId__c FROM ssot__Individual__dlm WHERE ssot__Id__c IN ('a00bm00003QTT4XAAX','a00bm00003QTT4YAAX')"}

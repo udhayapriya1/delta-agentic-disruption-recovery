@@ -1,0 +1,17 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "pnr": {
+      "title": "Booking reference",
+      "description": "Verified synthetic PNR supplied by the passenger, matching D followed by five digits. The API verifies subject ownership.",
+      "lightning:type": "lightning__textType",
+      "copilotAction:isUserInput": true,
+      "lightning:isPII": true
+    }
+  },
+  "required": [
+    "pnr"
+  ],
+  "title": "Input",
+  "description": "Synthetic disruption recovery action input"
+}

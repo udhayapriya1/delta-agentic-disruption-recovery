@@ -1,0 +1,139 @@
+1
+00:00:01,200 --> 00:00:06,766
+The flight has just been cancelled in the mock operations system. I have not touched the agent.
+
+2
+00:00:06,766 --> 00:00:12,332
+I am publishing the native disruption event now. Its subscriber opens a real Salesforce Case for the
+
+3
+00:00:12,332 --> 00:00:17,898
+synthetic passenger. Here is the independently queried Case and its event reference. This implementation does not yet
+
+4
+00:00:17,898 --> 00:00:23,464
+send a proactive outbound message or refresh Data 360 from the event, so I am not claiming
+
+5
+00:00:23,464 --> 00:00:29,030
+those steps. The Case is real; outbound delivery remains a release gate.
+
+6
+00:00:36,200 --> 00:00:42,416
+This passenger existed twice, with two email variants and one PNR. The live Data 360 query shows
+
+7
+00:00:42,416 --> 00:00:48,632
+both source records linked to one unified profile. Fourteen source records resolve into thirteen profiles. The deployed
+
+8
+00:00:48,632 --> 00:00:54,848
+rule requires exact canonical verified email, exact SkyMiles identifier, and exact surname together. It does not use
+
+9
+00:00:54,848 --> 00:01:01,064
+a fuzzy name match. Here are the source links and the exact rule. Raw records and preprocessing
+
+10
+00:01:01,064 --> 00:01:07,280
+lineage are retained, but native unmerge has not been demonstrated.
+
+11
+00:01:11,200 --> 00:01:17,494
+The agent is answering from verified customer context and the live status call. The unified Data Graph
+
+12
+00:01:17,494 --> 00:01:23,788
+verifies the passenger identity. Native Data 360 federation reads current loyalty context from Snowflake, with consent required
+
+13
+00:01:23,788 --> 00:01:30,082
+in the query. The cancellation comes from the synthetic reservation service, with its source field and timestamp
+
+14
+00:01:30,082 --> 00:01:36,376
+visible here. Contact data is masked in the context response, and payment data is never returned by
+
+15
+00:01:36,376 --> 00:01:42,670
+this API. The text below is the actual published Agentforce response.
+
+16
+00:01:46,200 --> 00:01:51,647
+Now watch the boundary. The agent is not inventing options. It is calling the external reservation system
+
+17
+00:01:51,647 --> 00:01:57,093
+now, and this trace is that call. These two options came back from that system. Both are
+
+18
+00:01:57,093 --> 00:02:02,540
+in the permitted cabin and within the pilot recovery window. Notice the inventory timestamp and the correlation
+
+19
+00:02:02,540 --> 00:02:07,987
+identifier alongside the request. The Salesforce and Snowflake dependencies are real. The reservation system is our executable
+
+20
+00:02:07,987 --> 00:02:13,433
+synthetic service. Live seat inventory remains there, rather than being copied into Data 360. No booking has
+
+21
+00:02:13,433 --> 00:02:18,880
+been made yet.
+
+22
+00:02:31,200 --> 00:02:37,565
+The passenger picks the earlier flight. The agent records that exact selection and posts it back to
+
+23
+00:02:37,565 --> 00:02:43,930
+the reservation system using a short-lived acceptance identifier and an idempotency key. The confirmation and booking reference
+
+24
+00:02:43,930 --> 00:02:50,295
+you see came from that system, not from the agent. The successful transaction also synchronizes a real
+
+25
+00:02:50,295 --> 00:02:56,660
+Salesforce Case. The Case number and synchronization result are shown alongside the authoritative reservation confirmation.
+
+26
+00:03:01,200 --> 00:03:06,093
+Now I will try to push it past its limit. I am asking for a two hundred
+
+27
+00:03:06,093 --> 00:03:10,987
+and fifty dollar voucher, above the two hundred dollar pilot threshold. It should refuse to do this
+
+28
+00:03:10,987 --> 00:03:15,880
+alone, and it does. The API creates an approval proposal without issuing the voucher. The agent requests
+
+29
+00:03:15,880 --> 00:03:20,773
+human review with the identity, loyalty, cancellation, booking, voucher and trace context attached to the Case. A
+
+30
+00:03:20,773 --> 00:03:25,667
+Case update does not prove that a staffed queue or a human has received it; that distinction
+
+31
+00:03:25,667 --> 00:03:30,560
+remains visible.
+
+32
+00:03:36,200 --> 00:03:41,860
+Last test. We are using a fresh, isolated reservation ledger. The seat has just gone, so the
+
+33
+00:03:41,860 --> 00:03:47,520
+external system returns four oh nine, inventory gone. The trace shows the actual rejected rebooking request. The
+
+34
+00:03:47,520 --> 00:03:53,180
+agent does not invent a seat. It re-queries, offers the next real option, and would escalate if
+
+35
+00:03:53,180 --> 00:03:58,840
+none existed. No booking is created by this failed attempt.

@@ -1,0 +1,37 @@
+{
+  "status": 0,
+  "result": {
+    "statusCode": 201,
+    "headers": {
+      "content-type": "application/json;charset=UTF-8",
+      "sforce-limit-info": "api-usage=535/15000",
+      "x-request-id": "526a5775f5e8ba24f9166f1df95d0764"
+    },
+    "body": {
+      "data": [
+        [
+          "SYN0000001",
+          "2.000000000000000000"
+        ]
+      ],
+      "done": true,
+      "endTime": "2026-11-15T23:53:53.320421372Z",
+      "metadata": {
+        "source_count__c": {
+          "placeInOrder": 1,
+          "type": "DECIMAL",
+          "typeCode": 3
+        },
+        "loyalty_key__c": {
+          "placeInOrder": 0,
+          "type": "VARCHAR",
+          "typeCode": 12
+        }
+      },
+      "queryId": "MTAuNzQuOTMuOTE6NzQ4NA_dc611dd7-bef7-47fb-ab33-0f929424a78e",
+      "rowCount": 1,
+      "startTime": "2026-11-15T23:53:52.949104115Z"
+    }
+  },
+  "warnings": []
+}

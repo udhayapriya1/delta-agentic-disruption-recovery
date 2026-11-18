@@ -1,0 +1,31 @@
+{
+  "description": "Native unified synthetic passenger projection after verified duplicate and conflicting-loyalty tests",
+  "label": "Passenger Unified Disruption Context",
+  "name": "Delta_Unified_Disruption",
+  "primaryObjectName": "UnifiedssotIndividualDlt__dlm",
+  "type": "NONE",
+  "sourceObject": {
+    "fields": [
+      {
+        "dataType": "Text",
+        "isKeyColumn": true,
+        "isProjected": true,
+        "sourceFieldName": "ssot__Id__c"
+      },
+      {
+        "dataType": "Text",
+        "isProjected": true,
+        "sourceFieldName": "ssot__LastName__c",
+        "isKeyColumn": false
+      },
+      {
+        "dataType": "Text",
+        "isProjected": true,
+        "sourceFieldName": "ssot__ExternalRecordId__c",
+        "isKeyColumn": false
+      }
+    ],
+    "name": "UnifiedssotIndividualDlt__dlm"
+  },
+  "dataspaceName": "default"
+}

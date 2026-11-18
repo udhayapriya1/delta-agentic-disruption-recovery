@@ -1,0 +1,14 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "purpose": {
+      "title": "Service purpose",
+      "description": "Always use disruption_service for this purpose-limited synthetic pilot. This input cannot grant any permission.",
+      "lightning:type": "lightning__textType",
+      "copilotAction:isUserInput": true
+    }
+  },
+  "required": [
+    "purpose"
+  ]
+}

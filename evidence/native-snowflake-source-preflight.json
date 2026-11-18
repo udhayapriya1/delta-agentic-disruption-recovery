@@ -1,0 +1,143 @@
+{
+  "source": "actual dedicated Snowflake context service identity",
+  "queries": [
+    {
+      "sql": "SELECT CURRENT_ROLE(), CURRENT_USER(), CURRENT_REGION()",
+      "query_id": "01c87107-0309-d9c3-0013-1a8e00018772",
+      "columns": [
+        "CURRENT_ROLE()",
+        "CURRENT_USER()",
+        "CURRENT_REGION()"
+      ],
+      "rows": [
+        [
+          "DELTA_DEMO_CONTEXT",
+          "DELTA_DEMO_CONTEXT_SERVICE",
+          "AWS_US_EAST_2"
+        ]
+      ]
+    },
+    {
+      "sql": "SHOW WAREHOUSES LIKE 'DELTA_DEMO_WH'",
+      "query_id": "01c87107-0309-d9c3-0013-1a8e00018776",
+      "columns": [
+        "name",
+        "state",
+        "type",
+        "size",
+        "min_cluster_count",
+        "max_cluster_count",
+        "started_clusters",
+        "running",
+        "queued",
+        "is_default",
+        "is_current",
+        "auto_suspend",
+        "auto_resume",
+        "available",
+        "provisioning",
+        "quiescing",
+        "other",
+        "created_on",
+        "resumed_on",
+        "updated_on",
+        "owner",
+        "comment",
+        "enable_query_acceleration",
+        "query_acceleration_max_scale_factor",
+        "resource_monitor",
+        "actives",
+        "pendings",
+        "failed",
+        "suspended",
+        "uuid",
+        "scaling_policy",
+        "owner_role_type",
+        "resource_constraint",
+        "generation",
+        "query_throughput_multiplier",
+        "max_query_performance_level",
+        "disabled_reasons",
+        "tables"
+      ],
+      "rows": [
+        [
+          "DELTA_DEMO_WH",
+          "SUSPENDED",
+          "STANDARD",
+          "X-Small",
+          1,
+          1,
+          0,
+          0,
+          0,
+          "Y",
+          "Y",
+          60,
+          "true",
+          "",
+          "",
+          "",
+          "",
+          "2026-11-15 12:38:18.751000-08:00",
+          "2026-11-15 14:45:12.733000-08:00",
+          "2026-11-15 14:45:12.733000-08:00",
+          "ACCOUNTADMIN",
+          "",
+          "false",
+          8,
+          "null",
+          0,
+          0,
+          0,
+          1,
+          "320507556",
+          "STANDARD",
+          "ROLE",
+          "STANDARD_GEN_1",
+          "1",
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+      "query_id": "01c87107-0309-d9c3-0013-1a8e0001877a",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          13
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM DELTA_DEMO.CUSTOMER_360.CONSENT",
+      "query_id": "01c87107-0309-d9c3-0013-1a8e0001877e",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          13
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM DELTA_DEMO.CUSTOMER_360.TRAVEL_HISTORY",
+      "query_id": "01c87107-0309-d9c3-0013-1a8e00018782",
+      "columns": [
+        "COUNT(*)"
+      ],
+      "rows": [
+        [
+          13
+        ]
+      ]
+    }
+  ]
+}

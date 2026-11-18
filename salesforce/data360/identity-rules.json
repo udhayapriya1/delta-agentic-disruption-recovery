@@ -1,0 +1,39 @@
+{
+  "label": "Delta Canonical Verified Email and Loyalty",
+  "description": "Canonical verified contact prepared by exact-key conflict-veto resolver; raw email preserved in Raw_Email__c. Native match also requires exact loyalty key and surname.",
+  "configurationType": "individual",
+  "rulesetId": "dlt",
+  "doesRunAutomatically": false,
+  "matchRules": [
+    {
+      "label": "Exact synthetic SkyMiles and surname",
+      "criteria": [
+        {
+          "entityName": "ssot__ContactPointEmail__dlm",
+          "fieldName": "ssot__EmailAddress__c",
+          "matchMethodType": "exact",
+          "shouldMatchOnBlank": false
+        },
+        {
+          "entityName": "ssot__Individual__dlm",
+          "fieldName": "ssot__ExternalRecordId__c",
+          "matchMethodType": "exact",
+          "shouldMatchOnBlank": false
+        },
+        {
+          "entityName": "ssot__Individual__dlm",
+          "fieldName": "ssot__LastName__c",
+          "matchMethodType": "exact",
+          "shouldMatchOnBlank": false
+        }
+      ]
+    }
+  ],
+  "reconciliationRules": [
+    {
+      "entityName": "ssot__Individual__dlm",
+      "ruleType": "lastupdated",
+      "shouldIgnoreEmptyValue": true
+    }
+  ]
+}

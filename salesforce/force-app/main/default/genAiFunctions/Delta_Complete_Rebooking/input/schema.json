@@ -1,0 +1,17 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "requestJson": {
+      "title": "Structured API request",
+      "description": "JSON object with pnr, option_id, passenger_ref, acceptance_id returned by acceptance API, idempotency_key (persistent unique key for this exact request). passenger_ref is P001 for this scoped synthetic demo. Requires explicit confirmation. Never invent acceptance_id.",
+      "lightning:type": "lightning__multilineTextType",
+      "copilotAction:isUserInput": true,
+      "lightning:isPII": true
+    }
+  },
+  "required": [
+    "requestJson"
+  ],
+  "title": "Input",
+  "description": "Synthetic disruption recovery action input"
+}

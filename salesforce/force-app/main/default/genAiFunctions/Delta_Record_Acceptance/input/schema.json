@@ -1,0 +1,17 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "requestJson": {
+      "title": "Structured API request",
+      "description": "JSON object with pnr and option_id copied from current options. Requires explicit passenger selection.",
+      "lightning:type": "lightning__multilineTextType",
+      "copilotAction:isUserInput": true,
+      "lightning:isPII": true
+    }
+  },
+  "required": [
+    "requestJson"
+  ],
+  "title": "Input",
+  "description": "Synthetic disruption recovery action input"
+}

@@ -1,0 +1,25 @@
+{
+  "duplicate_sources": [
+    "SRC001",
+    "SRC002"
+  ],
+  "duplicate_source_record_ids": [
+    "a00bm00003QTT4XAAX",
+    "a00bm00003QTT4YAAX"
+  ],
+  "duplicate_unified_ids": [
+    "86315adb8d57b3c1b0cddaff4f95cfc0",
+    "86315adb8d57b3c1b0cddaff4f95cfc0"
+  ],
+  "duplicate_merged": true,
+  "conflicting_loyalty_sources": [
+    "SRC013",
+    "SRC014"
+  ],
+  "conflicting_loyalty_kept_distinct": true,
+  "native_link_rows": 14,
+  "unique_native_profiles": 13,
+  "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_72eb16cd-2c82-44c7-969b-70ef02023d39",
+  "passed": true,
+  "source": "actual Data 360 query; local preprocessing is not substituted"
+}

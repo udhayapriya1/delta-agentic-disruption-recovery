@@ -1,0 +1,17 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "requestJson": {
+      "title": "Structured API request",
+      "description": "JSON object with reason containing a short description of why human assistance is needed.",
+      "lightning:type": "lightning__multilineTextType",
+      "copilotAction:isUserInput": true,
+      "lightning:isPII": true
+    }
+  },
+  "required": [
+    "requestJson"
+  ],
+  "title": "Input",
+  "description": "Synthetic disruption recovery action input"
+}

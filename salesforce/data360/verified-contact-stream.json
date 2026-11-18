@@ -1,0 +1,22 @@
+{
+  "name": "Delta_Verified_Contacts",
+  "label": "Delta Verified Contact Projection",
+  "datastreamType": "SFDC",
+  "connectorInfo": {
+    "connectorType": "SalesforceDotCom",
+    "connectorDetails": {
+      "name": "SalesforceDotCom_Home",
+      "sourceObject": "Passenger_Source__c"
+    }
+  },
+  "dataLakeObjectInfo": {
+    "name": "Delta_Verified_Contacts",
+    "label": "Delta Verified Contacts",
+    "category": "Profile",
+    "dataspaceInfo": [
+      {
+        "name": "default"
+      }
+    ]
+  }
+}

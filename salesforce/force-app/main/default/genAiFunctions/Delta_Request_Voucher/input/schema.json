@@ -1,0 +1,17 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "requestJson": {
+      "title": "Structured API request",
+      "description": "JSON object with passenger_ref P001, amount in USD, reason, case_ref returned by the API, idempotency_key. Above 200 returns APPROVAL_REQUIRED and does not issue. Do not supply an approval_id unless returned by authenticated human approval.",
+      "lightning:type": "lightning__multilineTextType",
+      "copilotAction:isUserInput": true,
+      "lightning:isPII": true
+    }
+  },
+  "required": [
+    "requestJson"
+  ],
+  "title": "Input",
+  "description": "Synthetic disruption recovery action input"
+}

@@ -1,0 +1,31 @@
+{
+  "lightning:type": "lightning__objectType",
+  "properties": {
+    "responseJson": {
+      "title": "responseJson",
+      "description": "Authoritative API response. Use only returned source facts, source fields and timestamps; a failure or approval-required response is not a completed transaction.",
+      "lightning:type": "lightning__multilineTextType",
+      "copilotAction:isDisplayable": false,
+      "copilotAction:isUsedByPlanner": true,
+      "lightning:isPII": false
+    },
+    "statusCode": {
+      "title": "statusCode",
+      "description": "HTTP status: 200 success, 409 conflict, 403 denied, 503 unavailable. Do not claim success for an error.",
+      "lightning:type": "lightning__numberType",
+      "copilotAction:isDisplayable": false,
+      "copilotAction:isUsedByPlanner": true,
+      "lightning:isPII": false
+    },
+    "traceId": {
+      "title": "traceId",
+      "description": "Action correlation identifier for operator audit.",
+      "lightning:type": "lightning__textType",
+      "copilotAction:isDisplayable": false,
+      "copilotAction:isUsedByPlanner": true,
+      "lightning:isPII": false
+    }
+  },
+  "title": "Output",
+  "description": "Synthetic disruption recovery action output"
+}

@@ -1,0 +1,434 @@
+{
+  "executed_at": "2026-11-16T04:10:26.736258+00:00",
+  "simulation": false,
+  "checks": [
+    {
+      "name": "Three active native external streams with acceleration disabled",
+      "passed": true
+    },
+    {
+      "name": "Synthetic mutation target uniquely found",
+      "passed": true
+    },
+    {
+      "name": "LOYALTY_PROFILES source/native counts reconcile",
+      "passed": true
+    },
+    {
+      "name": "CONSENT source/native counts reconcile",
+      "passed": true
+    },
+    {
+      "name": "TRAVEL_HISTORY source/native counts reconcile",
+      "passed": true
+    },
+    {
+      "name": "P001 actual native context",
+      "passed": true
+    },
+    {
+      "name": "P007 consent denied yields no native context",
+      "passed": true
+    },
+    {
+      "name": "P012 native baseline matches source",
+      "passed": true
+    },
+    {
+      "name": "Uncached native query sees source update without ingestion",
+      "passed": true
+    },
+    {
+      "name": "Native consent revocation immediately blocks context",
+      "passed": true
+    },
+    {
+      "name": "Source and native context restored",
+      "passed": true
+    },
+    {
+      "name": "FastAPI native federated context succeeds with verified unified identity",
+      "passed": true
+    },
+    {
+      "name": "Snowflake history proves Salesforce-issued native source queries",
+      "passed": true
+    }
+  ],
+  "queries": [
+    {
+      "label": "LOYALTY_PROFILES count",
+      "sql": "SELECT COUNT(*) FROM Delta_Snowflake_Loyalty__dll",
+      "body": {
+        "data": [
+          [
+            13
+          ]
+        ],
+        "done": true,
+        "endTime": "2026-11-16T04:10:29.973471811Z",
+        "metadata": {
+          "_col0": {
+            "placeInOrder": 0,
+            "type": "BIGINT",
+            "typeCode": -5
+          }
+        },
+        "queryId": "MTAuNzQuOTMuOTE6NzQ4NA_c3fe00dd-113a-4ee2-aec3-29ece485b005",
+        "rowCount": 1,
+        "startTime": "2026-11-16T04:10:29.327224846Z"
+      },
+      "request_id": "cbba20b1f71e656412399c7f12302ed5"
+    },
+    {
+      "label": "CONSENT count",
+      "sql": "SELECT COUNT(*) FROM Delta_Snowflake_Consent__dll",
+      "body": {
+        "data": [
+          [
+            13
+          ]
+        ],
+        "done": true,
+        "endTime": "2026-11-16T04:10:31.973946122Z",
+        "metadata": {
+          "_col0": {
+            "placeInOrder": 0,
+            "type": "BIGINT",
+            "typeCode": -5
+          }
+        },
+        "queryId": "MTAuNzQuOTMuOTE6NzQ4NA_dee929d7-177c-4f51-a123-f8a9d8edf403",
+        "rowCount": 1,
+        "startTime": "2026-11-16T04:10:31.425959213Z"
+      },
+      "request_id": "6723d3ccdcf1770cfc95accdc5c2bf6b"
+    },
+    {
+      "label": "TRAVEL_HISTORY count",
+      "sql": "SELECT COUNT(*) FROM Delta_Snowflake_Travel__dll",
+      "body": {
+        "data": [
+          [
+            13
+          ]
+        ],
+        "done": true,
+        "endTime": "2026-11-16T04:10:34.652710794Z",
+        "metadata": {
+          "_col0": {
+            "placeInOrder": 0,
+            "type": "BIGINT",
+            "typeCode": -5
+          }
+        },
+        "queryId": "MTAuNzQuOTMuOTE6NzQ4NA_704743f6-a1c0-4b39-98b3-bd0a39888150",
+        "rowCount": 1,
+        "startTime": "2026-11-16T04:10:33.929330621Z"
+      },
+      "request_id": "9d549ac0457ea15f7fbd85ed79703ae1"
+    },
+    {
+      "label": "P001 consent-granted profile",
+      "context": {
+        "passenger_id": "P001",
+        "tier": "GOLD",
+        "miles": 42000,
+        "source_timestamp": "2026-11-15 22:45:19.498 UTC",
+        "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_7265fe70-0110-429c-ba6b-bcdb4a597ffd",
+        "request_id": "5dee79a1f9bba3b306e113b29523bab5",
+        "source": "Delta_Snowflake_Loyalty__dll",
+        "source_system": "DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+        "access_mode": "DIRECT_ACCESS",
+        "adapter": "native_data360_snowflake",
+        "consent_source": "Delta_Snowflake_Consent__dll"
+      }
+    },
+    {
+      "label": "P007 consent-negative",
+      "context": null
+    },
+    {
+      "label": "P012 baseline",
+      "context": {
+        "passenger_id": "P012",
+        "tier": "GOLD",
+        "miles": 42000,
+        "source_timestamp": "2026-11-15 22:45:19.498 UTC",
+        "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_0211f635-e6b1-48ff-a675-bc38a8b1c7b9",
+        "request_id": "58ded323fe9df0c6d457a9e7496603e4",
+        "source": "Delta_Snowflake_Loyalty__dll",
+        "source_system": "DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+        "access_mode": "DIRECT_ACCESS",
+        "adapter": "native_data360_snowflake",
+        "consent_source": "Delta_Snowflake_Consent__dll"
+      }
+    },
+    {
+      "label": "P012 immediately after source update",
+      "context": {
+        "passenger_id": "P012",
+        "tier": "GOLD",
+        "miles": 42424,
+        "source_timestamp": "2026-11-15 22:45:19.498 UTC",
+        "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_0092ba9e-b97c-4b7c-895e-cb980c5ffba7",
+        "request_id": "4e8bbde7366ef5e7728b228095c3b616",
+        "source": "Delta_Snowflake_Loyalty__dll",
+        "source_system": "DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+        "access_mode": "DIRECT_ACCESS",
+        "adapter": "native_data360_snowflake",
+        "consent_source": "Delta_Snowflake_Consent__dll"
+      }
+    },
+    {
+      "label": "P012 revoked consent",
+      "context": null
+    },
+    {
+      "label": "P012 restored source state",
+      "context": {
+        "passenger_id": "P012",
+        "tier": "GOLD",
+        "miles": 42000,
+        "source_timestamp": "2026-11-15 22:45:19.498 UTC",
+        "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_49104023-7d83-4a75-bf30-6a85af5f9340",
+        "request_id": "0808f7a8116cbb5037e53e6d7815b073",
+        "source": "Delta_Snowflake_Loyalty__dll",
+        "source_system": "DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+        "access_mode": "DIRECT_ACCESS",
+        "adapter": "native_data360_snowflake",
+        "consent_source": "Delta_Snowflake_Consent__dll"
+      }
+    }
+  ],
+  "mutations": [
+    {
+      "action": "temporary synthetic mileage update",
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e00018942"
+    },
+    {
+      "action": "temporary synthetic consent revocation",
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e00018956"
+    },
+    {
+      "action": "restore original synthetic miles",
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001896a"
+    },
+    {
+      "action": "restore original synthetic consent",
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001896e"
+    }
+  ],
+  "api": {
+    "transport": "in-process ASGI; actual Salesforce/native Snowflake calls",
+    "status": 200,
+    "body": {
+      "passenger_id": "P001",
+      "tier": "GOLD",
+      "miles": 42000,
+      "source_timestamp": "2026-11-15 22:45:19.498 UTC",
+      "query_id": "MTAuNzQuOTMuOTE6NzQ4NA_022d028c-54e6-482e-a8fb-5984a42c36ee",
+      "request_id": "3a609cc751fe1768a5fe8f1ed8bd463e",
+      "source": "Delta_Snowflake_Loyalty__dll",
+      "source_system": "DELTA_DEMO.CUSTOMER_360.LOYALTY_PROFILES",
+      "access_mode": "DIRECT_ACCESS",
+      "adapter": "native_data360_snowflake",
+      "consent_source": "Delta_Snowflake_Consent__dll",
+      "passenger_ref": "4a4dd8db1644cc5a",
+      "contact": "masked",
+      "consent_purpose": "disruption_service",
+      "data360_context": {
+        "graph": "Delta_Unified_Disruption",
+        "profile_binding_verified": true,
+        "adapter": "real Salesforce REST via local authorized CLI; native Apex fallback",
+        "source_field": "ssot__ExternalRecordId__c",
+        "native_unified_merge_verified": true,
+        "unified_link_query_id": "MTAuNzQuOTMuOTE6NzQ4NA_d23868aa-671f-496e-b9e0-ad82eee286be",
+        "request_id": "404368c5d836c4f4690738489fa3c817"
+      }
+    }
+  },
+  "snowflake_query_history": [
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001898e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P001') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:57.090000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001897e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:50.060000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e00018966",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:46.610000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e00018952",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:43.669000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001893e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:41.021000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001892e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P007') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:38.831000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e0001891e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P001') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:36.531000-08:00"
+    },
+    {
+      "query_id": "01c8711a-0309-d9c3-0013-1a8e000188e6",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"group_1_agg_1\" FROM (\n  SELECT COUNT(*) AS \"group_1_agg_1\" FROM (\n    SELECT CAST('1' AS NUMBER(38,0)) AS \"forei_2_const_1\" FROM (\n      SELECT COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_2\"\n) AS \"group_1\"",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:10:29.877000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e000188c6",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P001') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:48.893000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e000188b6",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:41.227000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e0001889e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:37.648000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e0001888a",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:34.950000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e00018876",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P012') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:32.184000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e00018866",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P007') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:29.920000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e00018856",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P001') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:27.715000-08:00"
+    },
+    {
+      "query_id": "01c87118-0309-d9c3-0013-1a8e0001881e",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"group_1_agg_1\" FROM (\n  SELECT COUNT(*) AS \"group_1_agg_1\" FROM (\n    SELECT CAST('1' AS NUMBER(38,0)) AS \"forei_2_const_1\" FROM (\n      SELECT COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_2\"\n) AS \"group_1\"",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:08:20.354000-08:00"
+    },
+    {
+      "query_id": "01c87116-0309-d9c3-0013-1a8e00018806",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"forei_3_MILES_1\", \"forei_3_PASSE_2\", \"forei_3_SOURC_3\", \"forei_3_TIER_4\" FROM ((\n    SELECT \"cast_PASSENGER_ID\" AS \"forei_2_PASSE_1\" FROM (\n      SELECT \"ALLOWED\" AS \"cast_ALLOWED\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n    ) AS \"cast_forei_2\"\n    WHERE (\"cast_ALLOWED\" = CAST('true' AS BOOLEAN)) AND (\"cast_PURPOSE\" = 'disruption_service') AND (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n  ) AS \"forei_2\"\n  INNER JOIN (\n    SELECT \"cast_MILES\" AS \"forei_3_MILES_1\", \"cast_PASSENGER_ID\" AS \"forei_3_PASSE_2\", \"cast_SOURCE_TIMESTAMP\" AS \"forei_3_SOURC_3\", \"cast_TIER\" AS \"forei_3_TIER_4\" FROM (\n      SELECT CAST(\"MILES\" AS NUMBER(38,18)) AS \"cast_MILES\", COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", CAST(\"SOURCE_TIMESTAMP\" AS TIMESTAMP_LTZ(6)) AS \"cast_SOURCE_TIMESTAMP\", COLLATE(CAST(\"TIER\" AS VARCHAR), '') AS \"cast_TIER\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n    ) AS \"cast_forei_3\"\n    WHERE (\"cast_PASSENGER_ID\" = 'P001') AND (\"cast_PASSENGER_ID\" IS NOT NULL)\n  ) AS \"forei_3\"\n  ON (\"forei_2_PASSE_1\" = \"forei_3_PASSE_2\")\n)",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:06:15.822000-08:00"
+    },
+    {
+      "query_id": "01c87115-0309-d9c3-0013-1a8e000187f6",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"map_2_calc_1\", \"group_3_agg_1\" FROM ((\n      SELECT \"map_2_calc_1\", \"group_3_agg_1\" FROM (\n        SELECT *, 'loyalty' AS \"map_2_calc_1\" FROM (\n          SELECT COUNT(*) AS \"group_3_agg_1\" FROM (\n            SELECT CAST('1' AS NUMBER(38,0)) AS \"forei_4_const_1\" FROM (\n              SELECT COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"\n            ) AS \"cast_forei_4\"\n            WHERE (\"cast_PASSENGER_ID\" IS NOT NULL)\n          ) AS \"forei_4\"\n        ) AS \"group_3\"\n      ) AS \"map_2\")\n  UNION ALL (\n      SELECT \"map_5_calc_1\", \"group_6_agg_1\" FROM (\n        SELECT *, 'consent' AS \"map_5_calc_1\" FROM (\n          SELECT COUNT(*) AS \"group_6_agg_1\" FROM (\n            SELECT CAST('1' AS NUMBER(38,0)) AS \"forei_7_const_1\" FROM (\n              SELECT COLLATE(CAST(\"PASSENGER_ID\" AS VARCHAR), '') AS \"cast_PASSENGER_ID\", COLLATE(CAST(\"PURPOSE\" AS VARCHAR), '') AS \"cast_PURPOSE\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"CONSENT\"\n            ) AS \"cast_forei_7\"\n            WHERE (\"cast_PASSENGER_ID\" IS NOT NULL) AND (\"cast_PURPOSE\" IS NOT NULL)\n          ) AS \"forei_7\"\n        ) AS \"group_6\"\n      ) AS \"map_5\")\n  UNION ALL (\n      SELECT \"map_8_calc_1\", \"group_9_agg_1\" FROM (\n        SELECT *, 'travel' AS \"map_8_calc_1\" FROM (\n          SELECT COUNT(*) AS \"group_9_agg_1\" FROM (\n            SELECT CAST('1' AS NUMBER(38,0)) AS \"forei_10_const_1\" FROM (\n              SELECT COLLATE(CAST(\"TRAVEL_ID\" AS VARCHAR), '') AS \"cast_TRAVEL_ID\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"TRAVEL_HISTORY\"\n            ) AS \"cast_forei_10\"\n            WHERE (\"cast_TRAVEL_ID\" IS NOT NULL)\n          ) AS \"forei_10\"\n        ) AS \"group_9\"\n      ) AS \"map_8\")\n) AS \"union_1\"",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:05:27.857000-08:00"
+    },
+    {
+      "query_id": "01c87112-0309-d9c3-0013-1a8e000187ca",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "SELECT \"MILES\",\"SOURCE_TIMESTAMP\",\"TIER\",\"PASSENGER_ID\" FROM \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\" LIMIT 1",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:02:18.036000-08:00"
+    },
+    {
+      "query_id": "01c87112-0309-d9c3-0013-1a8e000187c2",
+      "user_name": "DELTA_DEMO_CONTEXT_SERVICE",
+      "role_name": "DELTA_DEMO_CONTEXT",
+      "warehouse_name": "DELTA_DEMO_WH",
+      "query_text": "show /* JDBC:DatabaseMetaData.getPrimaryKeys() */ primary keys in table \"DELTA_DEMO\".\"CUSTOMER_360\".\"LOYALTY_PROFILES\"",
+      "execution_status": "SUCCESS",
+      "start_time": "2026-11-15 20:02:17.720000-08:00"
+    }
+  ],
+  "passed": true
+}

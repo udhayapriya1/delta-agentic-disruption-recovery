@@ -1,0 +1,1 @@
+{"sql": "SELECT loyalty_key__c, source_count__c FROM Delta_Profile_Evidence__cio WHERE loyalty_key__c='SYN0000001'"}

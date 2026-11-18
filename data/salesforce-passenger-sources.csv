@@ -1,0 +1,15 @@
+Name,Source_Id__c,Passenger_Ref__c,SkyMiles__c,PNR__c,Email__c,Raw_Email__c,Tier__c,Consent__c,Special_Case__c,Identity_Email__c,Identity_Verified__c
+Synthetic1,SRC001,P001,SYN0000001,D00001,passenger1@example.invalid,passenger1@example.invalid,GOLD,true,routine,passenger1@example.invalid,true
+Synthetic1,SRC002,P001,SYN0000001,D00001,passenger1@example.invalid,passenger1.variant@example.invalid,GOLD,true,routine,passenger1@example.invalid,true
+Synthetic3,SRC003,P003,SYN0000003,D00003,passenger3@example.invalid,passenger3@example.invalid,GOLD,true,routine,passenger3@example.invalid,true
+Synthetic4,SRC004,P004,SYN0000004,D00004,passenger4@example.invalid,passenger4@example.invalid,GOLD,true,group,passenger4@example.invalid,true
+Synthetic5,SRC005,P005,SYN0000005,D00005,passenger5@example.invalid,passenger5@example.invalid,GOLD,true,medical,passenger5@example.invalid,true
+Synthetic6,SRC006,P006,SYN0000006,D00006,passenger6@example.invalid,passenger6@example.invalid,GOLD,true,minor,passenger6@example.invalid,true
+Synthetic7,SRC007,P007,SYN0000007,D00007,passenger7@example.invalid,passenger7@example.invalid,GOLD,false,routine,passenger7@example.invalid,true
+Synthetic8,SRC008,P008,SYN0000008,D00008,passenger8@example.invalid,passenger8@example.invalid,GOLD,true,routine,passenger8@example.invalid,true
+Synthetic9,SRC009,P009,SYN0000009,D00009,passenger9@example.invalid,passenger9@example.invalid,GOLD,true,routine,passenger9@example.invalid,true
+Synthetic10,SRC010,P010,SYN0000010,D00010,passenger10@example.invalid,passenger10@example.invalid,GOLD,true,routine,passenger10@example.invalid,true
+Synthetic11,SRC011,P011,SYN0000011,D00011,passenger11@example.invalid,passenger11@example.invalid,GOLD,true,routine,passenger11@example.invalid,true
+Synthetic12,SRC012,P012,SYN0000012,D00012,passenger12@example.invalid,passenger12@example.invalid,GOLD,true,routine,passenger12@example.invalid,true
+SharedSynthetic,SRC013,P013,SYN0000013,D00888,,group13@example.invalid,GOLD,true,group,,false
+SharedSynthetic,SRC014,P014,SYN0000014,D00888,,group14@example.invalid,GOLD,true,group,,false

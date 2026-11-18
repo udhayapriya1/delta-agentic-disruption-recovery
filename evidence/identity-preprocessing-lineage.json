@@ -1,0 +1,448 @@
+{
+  "profiles": [
+    {
+      "profile": {
+        "source_id": "SRC001",
+        "passenger_id": "P001",
+        "surname": "Synthetic1",
+        "email": "passenger1@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000001",
+        "tier": "GOLD",
+        "pnr": "D00001",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC001",
+          "passenger_id": "P001",
+          "surname": "Synthetic1",
+          "email": "passenger1@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000001",
+          "tier": "GOLD",
+          "pnr": "D00001",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        },
+        {
+          "source_id": "SRC002",
+          "passenger_id": "P001",
+          "surname": "Synthetic1",
+          "email": "passenger1.variant@example.invalid",
+          "email_verified": false,
+          "skymiles": "SYN0000001",
+          "tier": "GOLD",
+          "pnr": "D00001",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC003",
+        "passenger_id": "P003",
+        "surname": "Synthetic3",
+        "email": "passenger3@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000003",
+        "tier": "GOLD",
+        "pnr": "D00003",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC003",
+          "passenger_id": "P003",
+          "surname": "Synthetic3",
+          "email": "passenger3@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000003",
+          "tier": "GOLD",
+          "pnr": "D00003",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC004",
+        "passenger_id": "P004",
+        "surname": "Synthetic4",
+        "email": "passenger4@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000004",
+        "tier": "GOLD",
+        "pnr": "D00004",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "group",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC004",
+          "passenger_id": "P004",
+          "surname": "Synthetic4",
+          "email": "passenger4@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000004",
+          "tier": "GOLD",
+          "pnr": "D00004",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "group",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC005",
+        "passenger_id": "P005",
+        "surname": "Synthetic5",
+        "email": "passenger5@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000005",
+        "tier": "GOLD",
+        "pnr": "D00005",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "medical",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC005",
+          "passenger_id": "P005",
+          "surname": "Synthetic5",
+          "email": "passenger5@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000005",
+          "tier": "GOLD",
+          "pnr": "D00005",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "medical",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC006",
+        "passenger_id": "P006",
+        "surname": "Synthetic6",
+        "email": "passenger6@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000006",
+        "tier": "GOLD",
+        "pnr": "D00006",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "minor",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC006",
+          "passenger_id": "P006",
+          "surname": "Synthetic6",
+          "email": "passenger6@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000006",
+          "tier": "GOLD",
+          "pnr": "D00006",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "minor",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC007",
+        "passenger_id": "P007",
+        "surname": "Synthetic7",
+        "email": "passenger7@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000007",
+        "tier": "GOLD",
+        "pnr": "D00007",
+        "consent": false,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC007",
+          "passenger_id": "P007",
+          "surname": "Synthetic7",
+          "email": "passenger7@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000007",
+          "tier": "GOLD",
+          "pnr": "D00007",
+          "consent": false,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC008",
+        "passenger_id": "P008",
+        "surname": "Synthetic8",
+        "email": "passenger8@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000008",
+        "tier": "GOLD",
+        "pnr": "D00008",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC008",
+          "passenger_id": "P008",
+          "surname": "Synthetic8",
+          "email": "passenger8@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000008",
+          "tier": "GOLD",
+          "pnr": "D00008",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC009",
+        "passenger_id": "P009",
+        "surname": "Synthetic9",
+        "email": "passenger9@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000009",
+        "tier": "GOLD",
+        "pnr": "D00009",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC009",
+          "passenger_id": "P009",
+          "surname": "Synthetic9",
+          "email": "passenger9@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000009",
+          "tier": "GOLD",
+          "pnr": "D00009",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC010",
+        "passenger_id": "P010",
+        "surname": "Synthetic10",
+        "email": "passenger10@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000010",
+        "tier": "GOLD",
+        "pnr": "D00010",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC010",
+          "passenger_id": "P010",
+          "surname": "Synthetic10",
+          "email": "passenger10@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000010",
+          "tier": "GOLD",
+          "pnr": "D00010",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC011",
+        "passenger_id": "P011",
+        "surname": "Synthetic11",
+        "email": "passenger11@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000011",
+        "tier": "GOLD",
+        "pnr": "D00011",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC011",
+          "passenger_id": "P011",
+          "surname": "Synthetic11",
+          "email": "passenger11@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000011",
+          "tier": "GOLD",
+          "pnr": "D00011",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC012",
+        "passenger_id": "P012",
+        "surname": "Synthetic12",
+        "email": "passenger12@example.invalid",
+        "email_verified": true,
+        "skymiles": "SYN0000012",
+        "tier": "GOLD",
+        "pnr": "D00012",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "routine",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC012",
+          "passenger_id": "P012",
+          "surname": "Synthetic12",
+          "email": "passenger12@example.invalid",
+          "email_verified": true,
+          "skymiles": "SYN0000012",
+          "tier": "GOLD",
+          "pnr": "D00012",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "routine",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC013",
+        "passenger_id": "P013",
+        "surname": "SharedSynthetic",
+        "email": "group13@example.invalid",
+        "email_verified": false,
+        "skymiles": "SYN0000013",
+        "tier": "GOLD",
+        "pnr": "D00888",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "group",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC013",
+          "passenger_id": "P013",
+          "surname": "SharedSynthetic",
+          "email": "group13@example.invalid",
+          "email_verified": false,
+          "skymiles": "SYN0000013",
+          "tier": "GOLD",
+          "pnr": "D00888",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "group",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "profile": {
+        "source_id": "SRC014",
+        "passenger_id": "P014",
+        "surname": "SharedSynthetic",
+        "email": "group14@example.invalid",
+        "email_verified": false,
+        "skymiles": "SYN0000014",
+        "tier": "GOLD",
+        "pnr": "D00888",
+        "consent": true,
+        "cabin": "ECONOMY",
+        "special": "group",
+        "updated_at": "2026-11-15T12:00:00Z"
+      },
+      "sources": [
+        {
+          "source_id": "SRC014",
+          "passenger_id": "P014",
+          "surname": "SharedSynthetic",
+          "email": "group14@example.invalid",
+          "email_verified": false,
+          "skymiles": "SYN0000014",
+          "tier": "GOLD",
+          "pnr": "D00888",
+          "consent": true,
+          "cabin": "ECONOMY",
+          "special": "group",
+          "updated_at": "2026-11-15T12:00:00Z"
+        }
+      ]
+    }
+  ],
+  "merge_audit": [
+    {
+      "merge_id": "77c85b359b3b4cc0ab111391cc6ffa1a",
+      "rule": "exact_skymiles",
+      "sources": [
+        "SRC001",
+        "SRC002"
+      ],
+      "timestamp": "2026-11-16T00:03:40.633543+00:00",
+      "evidence": "deterministic exact keys; no fuzzy auto-merge",
+      "reversible": true
+    }
+  ],
+  "implementation": "local preprocessing; Data 360 native rules unverified"
+}

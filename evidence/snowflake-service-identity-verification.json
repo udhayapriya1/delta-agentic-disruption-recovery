@@ -1,0 +1,78 @@
+{
+  "bootstrap": [
+    {
+      "operation": "CREATE",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f4a",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f4e",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f56",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f5e",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f66",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f6a",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f72",
+      "executed": true
+    },
+    {
+      "operation": "CREATE",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f7a",
+      "executed": true
+    },
+    {
+      "operation": "ALTER",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f82",
+      "executed": true
+    },
+    {
+      "operation": "GRANT",
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f8a",
+      "executed": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "dedicated service identity and context role",
+      "passed": true,
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f9a"
+    },
+    {
+      "check": "context read permitted",
+      "passed": true,
+      "query_id": "01c870b4-0309-d9c3-0013-1a8e00017f9e"
+    },
+    {
+      "check": "cannot assume bootstrap role",
+      "passed": true,
+      "error_code": 3013
+    },
+    {
+      "check": "raw contact source inaccessible",
+      "passed": true,
+      "error_code": 2003
+    }
+  ],
+  "passed": true,
+  "credentials": "private key retained only in ignored mode-600 local secret file; no password or key in evidence"
+}

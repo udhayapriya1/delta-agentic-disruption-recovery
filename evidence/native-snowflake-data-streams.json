@@ -1,0 +1,529 @@
+{
+  "status": 0,
+  "result": {
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json;charset=UTF-8",
+      "sforce-limit-info": "api-usage=476/15000",
+      "x-request-id": "46428e4764761e20503cd59db3e1d0ac"
+    },
+    "body": {
+      "currentPageUrl": "/services/data/v68.0/ssot/data-streams?limit=100&offset=1",
+      "dataStreams": [
+        {
+          "advancedAttributes": {
+            "schema": "CUSTOMER_360",
+            "database": "DELTA_DEMO",
+            "object": "CONSENT"
+          },
+          "capabilities": {},
+          "connectorInfo": {
+            "connectorType": "SNOWFLAKE"
+          },
+          "dataAccessMode": "DIRECT_ACCESS",
+          "dataLakeObjectInfo": {
+            "capabilities": {},
+            "category": "Other",
+            "columnMappingProperties": {},
+            "dataLakeFieldInfoRepresentation": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_purpose",
+                "name": "KQ_purpose"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_passenger_id",
+                "name": "KQ_passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PURPOSE",
+                "name": "purpose"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "DateTime",
+                "isPrimaryKey": false,
+                "label": "SOURCE_TIMESTAMP",
+                "name": "source_timestamp"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Boolean",
+                "isPrimaryKey": false,
+                "label": "ALLOWED",
+                "name": "allowed"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              }
+            ],
+            "dataSpaceInfo": [
+              {
+                "label": "default",
+                "name": "default"
+              }
+            ],
+            "fields": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_purpose",
+                "name": "KQ_purpose"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_passenger_id",
+                "name": "KQ_passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PURPOSE",
+                "name": "purpose"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "DateTime",
+                "isPrimaryKey": false,
+                "label": "SOURCE_TIMESTAMP",
+                "name": "source_timestamp"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Boolean",
+                "isPrimaryKey": false,
+                "label": "ALLOWED",
+                "name": "allowed"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              }
+            ],
+            "id": "0gObm000004Gph1EAC",
+            "label": "Delta Snowflake Consent",
+            "name": "Delta_Snowflake_Consent__dll",
+            "status": "ACTIVE"
+          },
+          "dataSource": "Delta_Snowflake_Context",
+          "dataStreamType": "EXTERNAL",
+          "isEnabled": true,
+          "label": "Delta_Snowflake_Consent",
+          "lastRunStatus": "NONE",
+          "mappings": [],
+          "name": "Delta_Snowflake_Consent",
+          "recordId": "1dsbm000001oISdAAM",
+          "refreshConfig": {
+            "frequency": {
+              "hours": [],
+              "refreshDayOfMonth": []
+            },
+            "hasHeaders": false,
+            "isAccelerationEnabled": false,
+            "refreshMode": "TOTAL_REPLACE",
+            "shouldFetchImmediately": false,
+            "shouldTreatMissingFilesAsFailures": false
+          },
+          "sourceFields": [
+            {
+              "datatype": "Text",
+              "name": "PASSENGER_ID"
+            },
+            {
+              "datatype": "Text",
+              "name": "PURPOSE"
+            },
+            {
+              "datatype": "Boolean",
+              "name": "ALLOWED"
+            },
+            {
+              "datatype": "DateTime",
+              "format": "MM/dd/yyyy HH:mm:ss.SSS zzz",
+              "name": "SOURCE_TIMESTAMP"
+            }
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "advancedAttributes": {
+            "schema": "CUSTOMER_360",
+            "database": "DELTA_DEMO",
+            "object": "LOYALTY_PROFILES"
+          },
+          "capabilities": {},
+          "connectorInfo": {
+            "connectorType": "SNOWFLAKE"
+          },
+          "dataAccessMode": "DIRECT_ACCESS",
+          "dataLakeObjectInfo": {
+            "capabilities": {},
+            "category": "Profile",
+            "columnMappingProperties": {},
+            "dataLakeFieldInfoRepresentation": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_passenger_id",
+                "name": "KQ_passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              },
+              {
+                "dataType": "DateTime",
+                "isPrimaryKey": false,
+                "label": "SOURCE_TIMESTAMP",
+                "name": "source_timestamp"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Number",
+                "isPrimaryKey": false,
+                "label": "MILES",
+                "name": "miles"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "TIER",
+                "name": "tier"
+              }
+            ],
+            "dataSpaceInfo": [
+              {
+                "label": "default",
+                "name": "default"
+              }
+            ],
+            "fields": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_passenger_id",
+                "name": "KQ_passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              },
+              {
+                "dataType": "DateTime",
+                "isPrimaryKey": false,
+                "label": "SOURCE_TIMESTAMP",
+                "name": "source_timestamp"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Number",
+                "isPrimaryKey": false,
+                "label": "MILES",
+                "name": "miles"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "TIER",
+                "name": "tier"
+              }
+            ],
+            "id": "0gObm000004GpgzEAC",
+            "label": "Delta Snowflake Loyalty",
+            "name": "Delta_Snowflake_Loyalty__dll",
+            "status": "ACTIVE"
+          },
+          "dataSource": "Delta_Snowflake_Context",
+          "dataStreamType": "EXTERNAL",
+          "isEnabled": true,
+          "label": "Delta_Snowflake_Loyalty",
+          "lastRunStatus": "NONE",
+          "mappings": [],
+          "name": "Delta_Snowflake_Loyalty",
+          "recordId": "1dsbm000001oISbAAM",
+          "refreshConfig": {
+            "frequency": {
+              "hours": [],
+              "refreshDayOfMonth": []
+            },
+            "hasHeaders": false,
+            "isAccelerationEnabled": false,
+            "refreshMode": "TOTAL_REPLACE",
+            "shouldFetchImmediately": false,
+            "shouldTreatMissingFilesAsFailures": false
+          },
+          "sourceFields": [
+            {
+              "datatype": "Text",
+              "name": "PASSENGER_ID"
+            },
+            {
+              "datatype": "Text",
+              "name": "TIER"
+            },
+            {
+              "datatype": "Number",
+              "name": "MILES"
+            },
+            {
+              "datatype": "DateTime",
+              "format": "MM/dd/yyyy HH:mm:ss.SSS zzz",
+              "name": "SOURCE_TIMESTAMP"
+            }
+          ],
+          "status": "ACTIVE"
+        },
+        {
+          "advancedAttributes": {
+            "schema": "CUSTOMER_360",
+            "database": "DELTA_DEMO",
+            "object": "TRAVEL_HISTORY"
+          },
+          "capabilities": {},
+          "connectorInfo": {
+            "connectorType": "SNOWFLAKE"
+          },
+          "dataAccessMode": "DIRECT_ACCESS",
+          "dataLakeObjectInfo": {
+            "capabilities": {},
+            "category": "Other",
+            "columnMappingProperties": {},
+            "dataLakeFieldInfoRepresentation": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_travel_id",
+                "name": "KQ_travel_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "Date",
+                "isPrimaryKey": false,
+                "label": "TRAVEL_DATE",
+                "name": "travel_date"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "ROUTE",
+                "name": "route"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "TRAVEL_ID",
+                "name": "travel_id"
+              }
+            ],
+            "dataSpaceInfo": [
+              {
+                "label": "default",
+                "name": "default"
+              }
+            ],
+            "fields": [
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "KQ_travel_id",
+                "name": "KQ_travel_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source",
+                "name": "DataSource"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Internal Organization",
+                "name": "InternalOrganization"
+              },
+              {
+                "dataType": "Date",
+                "isPrimaryKey": false,
+                "label": "TRAVEL_DATE",
+                "name": "travel_date"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "ROUTE",
+                "name": "route"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "PASSENGER_ID",
+                "name": "passenger_id"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": false,
+                "label": "Data Source Object",
+                "name": "DataSourceObject"
+              },
+              {
+                "dataType": "Text",
+                "isPrimaryKey": true,
+                "label": "TRAVEL_ID",
+                "name": "travel_id"
+              }
+            ],
+            "id": "0gObm000004Gph0EAC",
+            "label": "Delta Snowflake Travel",
+            "name": "Delta_Snowflake_Travel__dll",
+            "status": "ACTIVE"
+          },
+          "dataSource": "Delta_Snowflake_Context",
+          "dataStreamType": "EXTERNAL",
+          "isEnabled": true,
+          "label": "Delta_Snowflake_Travel",
+          "lastRunStatus": "NONE",
+          "mappings": [],
+          "name": "Delta_Snowflake_Travel",
+          "recordId": "1dsbm000001oIScAAM",
+          "refreshConfig": {
+            "frequency": {
+              "hours": [],
+              "refreshDayOfMonth": []
+            },
+            "hasHeaders": false,
+            "isAccelerationEnabled": false,
+            "refreshMode": "TOTAL_REPLACE",
+            "shouldFetchImmediately": false,
+            "shouldTreatMissingFilesAsFailures": false
+          },
+          "sourceFields": [
+            {
+              "datatype": "Text",
+              "name": "TRAVEL_ID"
+            },
+            {
+              "datatype": "Text",
+              "name": "PASSENGER_ID"
+            },
+            {
+              "datatype": "Text",
+              "name": "ROUTE"
+            },
+            {
+              "datatype": "Date",
+              "format": "MM/dd/yyyy",
+              "name": "TRAVEL_DATE"
+            }
+          ],
+          "status": "ACTIVE"
+        }
+      ],
+      "totalSize": 21,
+      "scope": "Filtered to the three project Snowflake streams"
+    }
+  },
+  "warnings": []
+}

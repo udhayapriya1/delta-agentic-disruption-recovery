@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1840" viewBox="0 0 2400 1840" role="img" aria-labelledby="title desc">
+<title id="title">Delta Intelligent Medallion Passenger Disruption Recovery architecture</title><desc id="desc">Reference-inspired architecture with channels, a real Salesforce boundary, Data 360 profiles and native Snowflake federation, synthetic FastAPI operations, human review and evidence. Planned channels and production gaps are explicitly marked.</desc>
+<defs><marker id="navy" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#193F64"/></marker><marker id="teal" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0B7E75"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="2400" height="1840" rx="0" fill="#F5F8FC" stroke="#F5F8FC" stroke-width="0"/>
+<rect x="0" y="0" width="16" height="1840" rx="0" fill="#B51F36" stroke="#B51F36" stroke-width="0"/>
+<text x="80" y="65" font-size="20" fill="#64788B" font-weight="700">DELTA AIR LINES  /  SYNTHETIC ARCHITECTURE DEMONSTRATION</text>
+<text x="80" y="126" font-size="47" fill="#0B2946" font-weight="700">Intelligent Medallion Passenger Disruption Recovery</text>
+<text x="80" y="170" font-size="25" fill="#526A80" font-weight="400">Real Salesforce + native Snowflake federation • External reservation authority • Human approval above policy limits</text>
+<rect x="80" y="205" width="2240" height="160" rx="12" fill="#FFFFFF" stroke="#D6E1EC" stroke-width="2"/>
+<text x="110" y="240" font-size="20" fill="#173F64" font-weight="700">CHANNELS</text>
+<rect x="120" y="264" width="640" height="68" rx="8" fill="#FFFBF3" stroke="#C79742" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="145" y="306" font-size="26" fill="#88601F" font-weight="400">App push / SMS   ·   planned</text>
+<rect x="880" y="264" width="640" height="68" rx="8" fill="#E8F1FB" stroke="#567FA6" stroke-width="2"/>
+<text x="905" y="306" font-size="26" fill="#173F64" font-weight="600">Agentforce Builder Preview   ·   verified</text>
+<rect x="1640" y="264" width="640" height="68" rx="8" fill="#FFFBF3" stroke="#C79742" stroke-width="2" stroke-dasharray="8 6"/>
+<text x="1665" y="306" font-size="26" fill="#88601F" font-weight="400">Contact-center delivery   ·   planned</text>
+<path d="M1200 332 V475" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+<path d="M1200 332 V475" fill="none" stroke="#193F64" stroke-width="3" stroke-linejoin="round" marker-end="url(#navy)"/>
+<text x="1220" y="390" font-size="22" fill="#17324D" font-weight="400">passenger intent</text>
+<rect x="80" y="415" width="2240" height="675" rx="12" fill="#FFFFFF" stroke="#173F64" stroke-width="3"/>
+<rect x="100" y="400" width="385" height="34" rx="0" fill="#F5F8FC" stroke="#F5F8FC" stroke-width="0"/>
+<text x="112" y="425" font-size="24" fill="#173F64" font-weight="700">SALESFORCE BOUNDARY</text>
+<text x="1920" y="451" font-size="20" fill="#64788B" font-weight="400">Developer Edition • real cloud</text>
+<rect x="120" y="475" width="1420" height="150" rx="10" fill="#E7F0FC" stroke="#6C91B8" stroke-width="2"/>
+<text x="150" y="516" font-size="28" fill="#123759" font-weight="700">AGENTFORCE SERVICE AGENT</text>
+<text x="150" y="560" font-size="26" fill="#334E68" font-weight="400">4 topics: Disruption Status  |  Rebook  |  Credit Voucher  |  Escalate</text>
+<text x="150" y="599" font-size="26" fill="#334E68" font-weight="400">7 fixed actions → Flow / Apex → Named Credential</text>
+<rect x="1580" y="475" width="700" height="150" rx="10" fill="#F9EDF2" stroke="#BD8198" stroke-width="2"/>
+<text x="1610" y="516" font-size="27" fill="#63354B" font-weight="700">AGENT GUARDRAILS</text>
+<text x="1610" y="560" font-size="24" fill="#63354B" font-weight="400">Confirmation gates • fixed tool routes</text>
+<text x="1610" y="599" font-size="24" fill="#63354B" font-weight="400">No credential disclosure or card-refund action</text>
+<path d="M830 625 V715" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+<path d="M830 625 V715" fill="none" stroke="#193F64" stroke-width="3" stroke-linejoin="round" marker-end="url(#navy)"/>
+<text x="855" y="680" font-size="24" fill="#17324D" font-weight="400">2  Grounding via the integration API</text>
+<rect x="120" y="715" width="2160" height="315" rx="10" fill="#EFF9F5" stroke="#3C8D7C" stroke-width="2"/>
+<text x="150" y="759" font-size="30" fill="#0F5D53" font-weight="700">DATA 360</text>
+<text x="150" y="808" font-size="23" fill="#0F5D53" font-weight="700">CUSTOMER IDENTITY &amp; GROUNDED PROFILE</text>
+<text x="150" y="850" font-size="25" fill="#334E68" font-weight="400">CRM ingestion + source-to-DMO mappings</text>
+<text x="150" y="888" font-size="25" fill="#334E68" font-weight="400">14 source records → 13 unified profiles</text>
+<text x="150" y="926" font-size="25" fill="#334E68" font-weight="400">Native identity rules + unified Data Graph</text>
+<text x="150" y="964" font-size="25" fill="#334E68" font-weight="400">Calculated insight: duplicate-source count</text>
+<line x1="1200" y1="792" x2="1200" y2="981" stroke="#BDDCD2" stroke-width="2"/>
+<text x="1240" y="808" font-size="23" fill="#0F5D53" font-weight="700">NATIVE SNOWFLAKE FEDERATION</text>
+<text x="1240" y="850" font-size="25" fill="#334E68" font-weight="400">3 external DLOs • DIRECT_ACCESS • 13 rows each</text>
+<text x="1240" y="888" font-size="25" fill="#334E68" font-weight="400">Consent-filtered SQL • acceleration disabled</text>
+<text x="1240" y="926" font-size="25" fill="#334E68" font-weight="400">Loyalty + consent + travel remain in Snowflake</text>
+<text x="1240" y="964" font-size="25" fill="#334E68" font-weight="400">API combines Graph identity with federated facts</text>
+<path d="M1540 550 H1560 V660 H2350 V1145 H1600 V1220" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+<path d="M1540 550 H1560 V660 H2350 V1145 H1600 V1220" fill="none" stroke="#193F64" stroke-width="3" stroke-linejoin="round" marker-end="url(#navy)"/>
+<text x="1660" y="695" font-size="23" fill="#17324D" font-weight="400">1  Guarded HTTPS action calls</text>
+<text x="1660" y="727" font-size="20" fill="#17324D" font-weight="400"></text>
+<path d="M420 1030 V1250" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linejoin="round"/>
+<path d="M420 1030 V1250" fill="none" stroke="#0B7E75" stroke-width="4" stroke-linejoin="round" marker-end="url(#teal)"/>
+<rect x="180" y="1106" width="485" height="42" rx="0" fill="#F5F8FC" stroke="#F5F8FC" stroke-width="0"/>
+<text x="195" y="1135" font-size="23" fill="#0B7E75" font-weight="600">3  Native zero-copy • key-pair auth</text>
+<rect x="80" y="1185" width="2240" height="375" rx="12" fill="#FFFFFF" stroke="#B95662" stroke-width="3" stroke-dasharray="12 8"/>
+<rect x="850" y="1164" width="550" height="42" rx="0" fill="#F5F8FC" stroke="#F5F8FC" stroke-width="0"/>
+<text x="870" y="1194" font-size="24" fill="#A13746" font-weight="700">EXTERNAL SYSTEMS &amp; TRUST BOUNDARIES</text>
+<rect x="120" y="1250" width="640" height="265" rx="10" fill="#EFF8FC" stroke="#72A4BD" stroke-width="2"/>
+<text x="150" y="1292" font-size="27" fill="#15506C" font-weight="700">SNOWFLAKE AI DATA CLOUD</text>
+<text x="150" y="1336" font-size="24" fill="#334E68" font-weight="400">DELTA_DEMO.CUSTOMER_360</text>
+<text x="150" y="1371" font-size="24" fill="#334E68" font-weight="400">LOYALTY_PROFILES  •  CONSENT</text>
+<text x="150" y="1406" font-size="24" fill="#334E68" font-weight="400">TRAVEL_HISTORY</text>
+<text x="150" y="1441" font-size="24" fill="#334E68" font-weight="400">SELECT-only context service identity</text>
+<text x="150" y="1476" font-size="24" fill="#334E68" font-weight="400">X-Small warehouse • auto-suspend 60s</text>
+<rect x="820" y="1220" width="1460" height="85" rx="10" fill="#EEF3FA" stroke="#839CB6" stroke-width="2"/>
+<text x="850" y="1256" font-size="25" fill="#173F64" font-weight="700">FASTAPI INTEGRATION  /  TEMPORARY CLOUDFLARE HTTPS</text>
+<text x="850" y="1288" font-size="23" fill="#526A80" font-weight="400">Subject + role + consent checks  •  Expiring P001 bearer  •  Secrets outside source control</text>
+<path d="M1190 1305 V1335" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+<path d="M1190 1305 V1335" fill="none" stroke="#193F64" stroke-width="3" stroke-linejoin="round" marker-end="url(#navy)"/>
+<path d="M1930 1305 V1335" fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linejoin="round"/>
+<path d="M1930 1305 V1335" fill="none" stroke="#193F64" stroke-width="3" stroke-linejoin="round" marker-end="url(#navy)"/>
+<rect x="820" y="1335" width="700" height="180" rx="10" fill="#FFF5F3" stroke="#C78F86" stroke-width="2"/>
+<text x="850" y="1376" font-size="25" fill="#663C35" font-weight="700">RESERVATION / FLIGHT OPERATIONS</text>
+<text x="850" y="1418" font-size="23" fill="#334E68" font-weight="400">Status → options → explicit acceptance → rebook</text>
+<text x="850" y="1453" font-size="23" fill="#334E68" font-weight="400">Atomic seat allocation • payload-bound idempotency</text>
+<text x="850" y="1488" font-size="23" fill="#334E68" font-weight="400">Synthetic SQLite ledger + durable Case/handoff outboxes</text>
+<rect x="1560" y="1335" width="720" height="180" rx="10" fill="#FFF5F3" stroke="#C78F86" stroke-width="2"/>
+<text x="1590" y="1376" font-size="25" fill="#663C35" font-weight="700">VOUCHER POLICY &amp; APPROVAL</text>
+<text x="1590" y="1418" font-size="23" fill="#334E68" font-weight="400">≤ USD 200 autonomous demo cap</text>
+<text x="1590" y="1453" font-size="23" fill="#334E68" font-weight="400">USD 250 → APPROVAL_REQUIRED • separate approver</text>
+<text x="1590" y="1488" font-size="23" fill="#334E68" font-weight="400">Synthetic issuance only • no original-card refunds</text>
+<rect x="80" y="1610" width="1090" height="145" rx="10" fill="#FFFFFF" stroke="#8C9FB3" stroke-width="2"/>
+<text x="110" y="1650" font-size="25" fill="#173F64" font-weight="700">4  CONFIRMATION &amp; HUMAN REVIEW</text>
+<text x="110" y="1690" font-size="24" fill="#334E68" font-weight="400">Real Salesforce Case upsert + context-bearing handoff</text>
+<text x="110" y="1725" font-size="24" fill="#334E68" font-weight="400">Native cancellation event → Case • demo receipt recorded</text>
+<rect x="1210" y="1610" width="1110" height="145" rx="10" fill="#FFFFFF" stroke="#8C9FB3" stroke-width="2"/>
+<text x="1240" y="1650" font-size="25" fill="#173F64" font-weight="700">5  OBSERVABILITY &amp; EVALUATION</text>
+<text x="1240" y="1690" font-size="24" fill="#334E68" font-weight="400">API trace IDs • Data 360 / Snowflake query IDs • masked audit</text>
+<text x="1240" y="1725" font-size="24" fill="#334E68" font-weight="400">42 local tests • 9 Apex methods • 4 native cases / 12 assertions</text>
+<text x="80" y="1803" font-size="21" fill="#526A80" font-weight="400">Solid = implemented and evidenced    |    Dashed amber = planned channel    |    Synthetic data and operations only</text>
+<text x="80" y="1832" font-size="20" fill="#6D7E8D" font-weight="400">Production gates: hosted OAuth / HTTPS, approved residency and retention, staffed routing, outbound consent and capacity validation</text>
+</g></svg>

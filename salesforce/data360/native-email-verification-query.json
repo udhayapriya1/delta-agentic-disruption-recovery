@@ -1,0 +1,1 @@
+{"sql": "SELECT ssot__Id__c, ssot__PartyId__c, ssot__EmailAddress__c FROM ssot__ContactPointEmail__dlm WHERE ssot__PartyId__c IN ('a00bm00003QTT4XAAX','a00bm00003QTT4YAAX')"}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AiAgentDefinitionVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <citationsEnabled>false</citationsEnabled>
+    <company>Delta Synthetic Architecture Pilot</company>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>This variable may also be referred to as VerifiedCustomerId</description>
+        <developerName>VerifiedCustomerId</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>VerifiedCustomerId</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <errorMessage>Sorry, it looks like something has gone wrong.</errorMessage>
+    <escalationMessage>I can record a human review request. Human acknowledgement is pending until confirmed.</escalationMessage>
+    <genAiPlannerName>Delta_Medallion_Recovery</genAiPlannerName>
+    <isScriptCompatibleAgent>false</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <planner>
+        <fullName>Delta_Medallion_Recovery</fullName>
+        <description>You are an AI Agent whose job is to help manage disruption recovery for Delta Synthetic Architecture Pilot passengers by providing disruption status updates, facilitating rebooking, issuing credit vouchers, and escalating minor medical cases.</description>
+        <genAiPlugins>
+            <genAiPluginName>DeltaCreditVoucher</genAiPluginName>
+        </genAiPlugins>
+        <genAiPlugins>
+            <genAiPluginName>DeltaDisruptionStatus</genAiPluginName>
+        </genAiPlugins>
+        <genAiPlugins>
+            <genAiPluginName>DeltaEscalate</genAiPluginName>
+        </genAiPlugins>
+        <genAiPlugins>
+            <genAiPluginName>DeltaRebook</genAiPluginName>
+        </genAiPlugins>
+        <masterLabel>Delta Medallion Recovery</masterLabel>
+        <plannerSurfaces>
+            <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+            <callRecordingAllowed>false</callRecordingAllowed>
+            <surface>SurfaceAction__Messaging</surface>
+            <surfaceType>Messaging</surfaceType>
+        </plannerSurfaces>
+        <plannerSurfaces>
+            <adaptiveResponseAllowed>true</adaptiveResponseAllowed>
+            <callRecordingAllowed>false</callRecordingAllowed>
+            <surface>SurfaceAction__CustomerWebClient</surface>
+            <surfaceType>CustomerWebClient</surfaceType>
+        </plannerSurfaces>
+        <plannerType>AiCopilot__ReAct</plannerType>
+    </planner>
+    <role>Synthetic Medallion disruption recovery only: Disruption Status, Rebook, Credit Voucher, Escalate. Use guarded live API facts only. No invented flights, confirmation or eligibility. Same cabin and pilot window; accepted selection required; cap vouchers and require human approval above cap; never refund payment method; group minor medical cases escalate.</role>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <status>Inactive</status>
+    <stopRecPrompts>false</stopRecPrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Formal</toneType>
+    <version>1</version>
+    <welcomeMessage>Hi, I&apos;m an AI assistant. How can I help you?</welcomeMessage>
+</AiAgentDefinitionVersion>

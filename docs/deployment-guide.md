@@ -1,0 +1,20 @@
+# Deployment and demonstration runbook
+
+Target the existing authorized `delta-dev` Salesforce org and existing DRJMZEF-SU04270 Snowflake account. Do not create another account, reset databases or expose credentials.
+
+1. Authenticate `sf org login web --alias delta-dev` only if the saved org login is unavailable. Inspect `sf org list` without sharing auth material. The Developer org must have Agentforce/Data 360 and the existing dedicated agent user/permissions.
+2. Use `scripts/deploy_salesforce.sh` for the same org. It deploys supported primitives, tested Apex/Flows, functions/topics and the agent version in stages. It intentionally excludes the earlier unpublished Agent Script authoring bundle and the compatibility planner snapshot. On a different org, create the runtime agent/user and rebind source IDs first; these artifacts are not a claim of automatic cross-org portability.
+3. Prepare CRM data with `.venv/bin/python -m scripts.prepare_salesforce_data`; Bulk upsert `Passenger_Source__c` by `Source_Id__c`. The script writes LF CSV and preserves raw contacts. Verify 14 processed/zero errors, CRM canonical contacts, DLO/DMO propagation and native link results. An accepted refresh request is not propagation proof.
+4. Data 360 configuration bodies are in `salesforce/data360/`. Inspect existing resources before create/update. The deployed objects are Delta_Passenger_Source, Individual/Email/PartyIdentification mappings, Individual_dlt identity rules, Delta_Profile_Evidence__cio, Passenger_Disruption_Context source Graph and Delta_Unified_Disruption native unified Graph. Wait for readiness and query actual facts. `scripts/verify_native_identity.py` is the native positive/negative gate.
+5. Bootstrap Snowflake only as needed using `scripts/cloud_bootstrap.py`. Provision the dedicated context identity using `scripts/provision_snowflake_service.py`. Never send the bootstrap credential to Salesforce or the tunnel. The key-pair user is restricted to three context tables and cannot assume ACCOUNTADMIN or read raw sources.
+6. Start FastAPI following README. Actual Graph/Case integration uses authenticated Salesforce CLI locally; hosted OAuth remains a separate gate. The default database path can be changed with DELTA_DB. Successful run databases remain preserved under ignored tmp paths.
+7. Temporary tunnel access is explicitly scoped to P001, synthetic payload and the approved expiry. `resume_cloud_api.py` never renews it; `resume_cloud_tunnel.py` can restore the network endpoint. Deploy the changed Named Credential URL and update the existing encrypted credential with `configure_demo_credential.py` only within the authorized scope. Never print runtime JSON or private keys.
+8. Run local tests, native evaluations and independent Case verification. Saved evidence contains real timestamps/query/session/trace IDs. Replaying files is not a fresh live test. Use the recorded demo and its explicitly timestamped execution evidence if a cloud dependency is unavailable.
+
+## Exact remaining manual gates
+
+Native Snowflake Data 360 federation is implemented: an Active connector exposes loyalty, consent and travel as three DIRECT_ACCESS external DLOs with acceleration disabled. See [verified connection, mappings and remaining boundaries](federation-decision.md). A new org still requires connector setup and dedicated key-pair credentials; no custom federated DMO/Graph relationships are claimed.
+
+Outbound messaging/human routing: select an authorized synthetic channel/test recipient strategy and staffed queue with the business owner. Do not message a real person without explicit authorization. Verify actual event-to-channel delivery and human acknowledgement before claiming them. The current developer preview and Case update do not satisfy those gates.
+
+Production: provision hosted Salesforce OAuth, approved persistent HTTPS and secret storage, source retention/classification/deletion, distributed queues/rate limiting, surge tests and signed business policies. No production SLA or business outcome is implied by this runbook.
