@@ -1,12 +1,16 @@
 # Delta Agentic Disruption Recovery
 
-From cancelled to confirmed in Minutes: delta-rebooking-1min-video
+**From cancelled to confirmed in minutes — one-minute overview**
 
-[![Watch the one-minute rebooking demo](video/demo/delta-rebooking-1min-poster.jpg)](video/demo/delta-rebooking-1min-video.mp4)
+https://github.com/user-attachments/assets/46381434-0447-433f-96ca-719390de2c67
 
-**[Watch the one-minute rebooking video](video/demo/delta-rebooking-1min-video.mp4)**
+[Download the one-minute MP4](https://github.com/udhayapriya1/delta-agentic-disruption-recovery/raw/refs/heads/main/video/demo/delta-rebooking-1min-video.mp4)
 
-**[Watch the narrated demo](video/demo/delta-recovery-live-demo.mp4)** · [Execution evidence](video/demo/execution.json) · [Four-minute script](video/demo/script.md)
+**Four-minute product demo — actual execution with narration**
+
+https://github.com/user-attachments/assets/d924ee6a-3e89-45e8-b045-29978297245c
+
+[Download the full demo MP4](https://github.com/udhayapriya1/delta-agentic-disruption-recovery/raw/refs/heads/main/video/demo/delta-recovery-live-demo.mp4) · [Execution evidence](video/demo/execution.json) · [Four-minute script](video/demo/script.md)
 
 A cancelled flight should lead to a verified recovery, with the correct passenger, current inventory and a clear boundary for human approval.
 
