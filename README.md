@@ -32,6 +32,12 @@ By combining unified customer profiles, operational flight data, and trusted AI,
 - External Airline Reservation Systems
 - Enterprise Data Lakehouse Platforms
 
+  
+
+### Agent Architecture
+
+![Current Salesforce, Data 360, Snowflake and reservation architecture](architecture/presentation/delta-recovery-architecture.png)
+
 ## Business Benefits
 
 - Faster passenger recovery during disruptions
@@ -101,10 +107,6 @@ The published agent has seven registered actions. The Case workflow below is a s
 | Issue / request voucher | Amount, reason, Case reference and idempotency key in / voucher ID or approval-required request out | Flow calling the voucher API | Autonomous up to $200; separate human approval above it. |
 | Create / update Case — supporting workflow | Verified transaction ID and summary in / Case record ID out | Flow with guarded Apex upsert; runtime synchronization uses Salesforce REST | Autonomous after authoritative booking confirmation; recovery action permission required for the Flow. |
 | Escalate to human | Passenger request and available context package in / durable handoff and Case update status out | Flow calling the escalation API | Autonomous and on demand; no claim of staffed delivery or human acknowledgement. |
-
-### Agent Architecture
-
-![Current Salesforce, Data 360, Snowflake and reservation architecture](architecture/presentation/delta-recovery-architecture.png)
 
 ### Component Details
 
