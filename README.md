@@ -6,6 +6,46 @@ https://github.com/user-attachments/assets/46381434-0447-433f-96ca-719390de2c67
 
 [Download the one-minute MP4](https://github.com/udhayapriya1/delta-agentic-disruption-recovery/raw/refs/heads/main/video/demo/delta-rebooking-1min-video.mp4)
 
+# Delta Air Lines Disruption Recovery Assistant
+
+## Overview
+
+This solution demonstrates how Salesforce Data Cloud and Agentforce can help airlines proactively manage flight disruptions by providing passengers with real\-time updates, rebooking options, and compensation guidance through an AI\-powered assistant.
+
+By combining unified customer profiles, operational flight data, and trusted AI, the solution reduces customer wait times, improves service efficiency, and enables faster disruption recovery while maintaining strict governance and human oversight.
+
+## Key Capabilities
+
+- Proactive disruption notifications
+- Passenger identity resolution and profile unification
+- AI\-powered flight status and rebooking assistance
+- Voucher and compensation eligibility guidance
+- Seamless escalation to human agents
+- Secure, auditable, and grounded AI responses
+
+## Technology Stack
+
+- Salesforce Data Cloud
+- Agentforce
+- Service Cloud
+- Einstein Trust Layer
+- External Airline Reservation Systems
+- Enterprise Data Lakehouse Platforms
+
+## Business Benefits
+
+- Faster passenger recovery during disruptions
+- Reduced contact center volume
+- Improved customer satisfaction
+- Increased agent productivity
+- Trusted and governed AI interactions
+
+## Design Principle
+
+Automate routine disruption recovery tasks while ensuring that high\-impact decisions remain secure, transparent, and under appropriate human oversight.
+
+
+
 **Four-minute product demo — actual execution with narration**
 
 https://github.com/user-attachments/assets/d924ee6a-3e89-45e8-b045-29978297245c
@@ -14,7 +54,6 @@ https://github.com/user-attachments/assets/d924ee6a-3e89-45e8-b045-29978297245c
 
 A cancelled flight should lead to a verified recovery, with the correct passenger, current inventory and a clear boundary for human approval.
 
-This project demonstrates that journey using **Salesforce Agentforce, Data 360 and Snowflake**, connected to an executable synthetic reservation and voucher service. Salesforce and Snowflake calls are real. Passenger records, flight operations, bookings and voucher policies are synthetic demonstration data; this is not a Delta production system.
 
 ## Pilot Targets to Validate — Not Baselines
 
@@ -160,4 +199,3 @@ video/demo/       Product demo videos, captions and execution evidence
 docs/             Deployment, data model, federation and security runbooks
 ```
 
-Earlier architectures, migration plans, raw deployment iterations and presentation drafts are excluded from the demo check-in. The README structure follows the agent overview, architecture, components and setup flow of the [Harmony City Zoo agent example](https://github.com/lynnaloo/harmony-zoo-agent/blob/main/README.md).
